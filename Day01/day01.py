@@ -42,3 +42,32 @@ def part_one():
 
 
 print('part_one: ', part_one())
+
+
+# Part 02
+
+
+def test_part_two():
+    locations = import_input('input_test.yml')
+    left = [row[0] for row in locations]
+    rght = [row[1] for row in locations]
+    score = 0
+    for num in left:
+        score += num * rght.count(num)
+    return score
+
+
+print('test_part_two: ', test_part_two())
+
+
+def part_two():
+    locations = import_input('input.yml')
+    left = [row[0] for row in locations]
+    rght = [row[1] for row in locations]
+    score = 0
+    for num in left:
+        score += num * rght.count(num)
+    return score
+
+
+print('part_two: ', part_two())
